@@ -9,6 +9,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.tutorialmod.TutorialMod;
+import net.tutorialmod.block.custom.JumpyBlock;
 import net.tutorialmod.item.ModCreativeTab;
 import net.tutorialmod.item.ModItem;
 
@@ -20,6 +21,7 @@ public class ModBlock {
 
 //    public static final RegistrySupplier<Block> ZIRCON_BLOCK = BLOCKS.register("zircon_block",()->new Block(BlockBehaviour.Properties.copy(Blocks.STONE)));
     public static final RegistrySupplier<Block> ZIRCON_BLOCK = registerBlock("zircon_block",()->new Block(BlockBehaviour.Properties.copy(Blocks.STONE)));
+    public static final RegistrySupplier<Block> JUMPY_BLOCK = registerBlock("jumpy_block",()-> new JumpyBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
     private static <T extends Block> RegistrySupplier<T> registerBlock(String name, Supplier<T> block) {
         RegistrySupplier<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);
