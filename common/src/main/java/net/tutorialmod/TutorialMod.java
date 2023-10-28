@@ -10,6 +10,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.tutorialmod.block.ModBlock;
 import net.tutorialmod.item.ModCreativeTab;
 import net.tutorialmod.item.ModItem;
 
@@ -22,8 +23,9 @@ public class TutorialMod {
 
     public static void init() {
         ModCreativeTab.register();
+        ModBlock.register();
         ModItem.register();
-        
+
         System.out.println(TutorialModExpectPlatform.getConfigDirectory().toAbsolutePath().normalize().toString());
     }
 }
