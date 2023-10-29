@@ -11,6 +11,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.tutorialmod.TutorialMod;
+import net.tutorialmod.block.custom.BlueberryCropBlock;
 import net.tutorialmod.block.custom.JumpyBlock;
 import net.tutorialmod.block.custom.ZirconLampBlock;
 import net.tutorialmod.item.ModCreativeTab;
@@ -47,6 +48,9 @@ public class ModBlock {
             () -> new ZirconLampBlock(BlockBehaviour.Properties.copy(Blocks.STONE)
                     .strength(6f).requiresCorrectToolForDrops()
                     .lightLevel(state -> state.getValue(ZirconLampBlock.LIT) ? 15 : 0)));
+    //crop
+    public static final RegistrySupplier<Block> BLUEBERRY_CROP = BLOCKS.register("blueberry_crop",
+            () -> new BlueberryCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT)));
 
 
     private static <T extends Block> RegistrySupplier<T> registerBlock(String name, Supplier<T> block) {
