@@ -12,6 +12,7 @@ import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.tutorialmod.TutorialMod;
 import net.tutorialmod.block.custom.JumpyBlock;
+import net.tutorialmod.block.custom.ZirconLampBlock;
 import net.tutorialmod.item.ModCreativeTab;
 import net.tutorialmod.item.ModItem;
 
@@ -41,6 +42,12 @@ public class ModBlock {
             () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.STONE)
                     .strength(6f).requiresCorrectToolForDrops(),
                     UniformInt.of(3, 7)));
+    //lamp
+    public static final RegistrySupplier<Block> ZIRCON_LAMP = registerBlock("zircon_lamp",
+            () -> new ZirconLampBlock(BlockBehaviour.Properties.copy(Blocks.STONE)
+                    .strength(6f).requiresCorrectToolForDrops()
+                    .lightLevel(state -> state.getValue(ZirconLampBlock.LIT) ? 15 : 0)));
+
 
     private static <T extends Block> RegistrySupplier<T> registerBlock(String name, Supplier<T> block) {
         RegistrySupplier<T> toReturn = BLOCKS.register(name, block);
