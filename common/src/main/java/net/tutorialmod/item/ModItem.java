@@ -18,6 +18,9 @@ public class ModItem {
     // 高级物品
     public static final RegistrySupplier<Item> EIGHT_BALL_ITEM = ITEMS.register("eight_ball",
             () -> new EightBallItem(new Item.Properties().arch$tab(ModCreativeTab.EXAMPLE_TAB).stacksTo(1)));
+    //
+    public static final RegistrySupplier<Item> RAW_ZIRCON = ITEMS.register("raw_zircon",
+            () -> new Item(new Item.Properties().arch$tab(ModCreativeTab.EXAMPLE_TAB)));
 
     public static void register(){
         ITEMS.register();

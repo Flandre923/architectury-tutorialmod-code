@@ -13,21 +13,21 @@ This is an example description! Tell everyone what your mod is about!
 '''
 #logoFile = ""
 
-[[dependencies.examplemod]]
+[[dependencies.tutorialmod]]
 modId = "forge"
 mandatory = true
 versionRange = "[47,)"
 ordering = "NONE"
 side = "BOTH"
 
-[[dependencies.examplemod]]
+[[dependencies.tutorialmod]]
 modId = "minecraft"
 mandatory = true
 versionRange = "[1.20.1,)"
 ordering = "NONE"
 side = "BOTH"
 
-[[dependencies.examplemod]]
+[[dependencies.tutorialmod]]
 modId = "architectury"
 mandatory = true
 versionRange = "[9.1.12,)"
