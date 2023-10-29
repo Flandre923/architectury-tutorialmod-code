@@ -17,6 +17,9 @@
   "entrypoints": {
     "main": [
       "net.tutorialmod.fabric.TutorialModFabric"
+    ],
+    "client": [
+      "net.tutorialmod.fabric.TutorialModFabricClient"
     ]
   },
   "mixins": [
