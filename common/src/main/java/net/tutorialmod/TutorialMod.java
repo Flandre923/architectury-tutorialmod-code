@@ -14,6 +14,7 @@ import net.tutorialmod.block.ModBlock;
 import net.tutorialmod.item.ModCreativeTab;
 import net.tutorialmod.item.ModItem;
 import net.tutorialmod.painting.ModPainting;
+import net.tutorialmod.villager.ModVillagers;
 
 import java.util.function.Supplier;
 
@@ -27,6 +28,7 @@ public class TutorialMod {
         ModBlock.register();
         ModItem.register();
         ModPainting.register();
+        ModVillagers.register();
 
         System.out.println(TutorialModExpectPlatform.getConfigDirectory().toAbsolutePath().normalize().toString());
     }
